@@ -14,7 +14,7 @@
 #'
 #' @export
 #'
-#' @importFrom dplyr mutate select rename
+#' @import dplyr
 #' 
 #' @examples
 #' data <- data.frame(X = 1:2, instant = 1:2, dteday = c("2021-01-01", "2021-01-02"),
@@ -22,10 +22,10 @@
 #' clean_bike_data(data)
 
 clean_bike_data <- function(data) {
-  data %>%
-    dplyr::select(-instant, -dteday) %>%
+  data |>
+    dplyr::select(-instant, -dteday) |>
     dplyr::mutate(
       weathersit = as.factor(weathersit),
-      cnt = as.numeric(cnt)) %>%
-    dplyr::rename(id = `...1`)
+      cnt = as.numeric(cnt)) |>
+    dplyr::rename(id = X)
 }

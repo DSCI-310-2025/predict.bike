@@ -38,7 +38,8 @@ split_data <- function(data, prop = 0.75) {
 #' @export
 #'
 #' @examples
-#' model <- train_bike_model(bike_data, cnt ~ temp + season)
+#' data <- data.frame(x = rnorm(100), y = rnorm(100))
+#' model <- train_bike_model(data, y ~ x)
 train_bike_model <- function(train_data, formula) {
   stats::lm(formula, data = train_data)
 }
@@ -58,7 +59,9 @@ train_bike_model <- function(train_data, formula) {
 #' @export
 #'
 #' @examples
-#' results <- evaluate_model(model, test_data, "cnt")
+#' data <- data.frame(x = rnorm(100), y = rnorm(100))
+#' model <- train_bike_model(data, y ~ x)
+#' results <- evaluate_model(model, data, "y")
 evaluate_model <- function(model, test_data, response_var) {
   predictions <- predict(model, newdata = test_data)
   actuals <- test_data[[response_var]]

@@ -13,6 +13,9 @@
 #' @return A scatter ggplot
 #' 
 #' @export
+#' 
+#' @importFrom ggplot2
+#' 
 #' @examples
 #' data_frame <- data.frame(x = c(1,2,3,4,5), y = c(5,6,7,8,9))
 #' make_scatter(data_frame, "x", "y", "My Scatter Plot", "X-axis", "Y-axis", "Blue")
@@ -35,11 +38,15 @@ make_scatter <- function(data, x, y, title, xlab, ylab, color) {
 #' @param title A title for you plot
 #' @param xlab A label for your x-axis
 #' @param ylab A label for you y-axis
+#' @param xlabels Labels for the variables on your x-axis
 #' @param fill The variable you the bars to fill to
 #'
 #' @return A bar ggplot
 #' 
 #' @export
+#' 
+#' @importFrom ggplot2
+#' 
 #' @examples
 #' data_frame <- data.frame(x = c(1,2,3,4,5), y = c(5,6,7,8,9))
 #' make_bar(data_frame, "x", "y", "x", "My Bar Plot", "X-axis", "Y-axis", xlabels = c("1", "2","3", "4", "5"))
@@ -64,8 +71,9 @@ make_bar <- function(data, x, y, fill, title, xlab, ylab, xlabels) {
 #'
 #' @export
 #' @examples
+#' directory <- "output/bike_data.csv"
 #' save_plot("test_plot.png", directory, 10 )
 
 save_plot <- function(name, output_file, width) {
-  ggplot2::ggsave(name, path=output_file, width = as.numeric(width))
+  ggplot2::ggsave(name, path=output_file, width = as.numeric(width), create.dir = TRUE)
 }

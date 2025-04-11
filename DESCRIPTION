@@ -15,5 +15,7 @@ BugReports: https://github.com/DSCI-310-2025/predict.bike/issues
 Imports: 
     dplyr,
     ggplot2,
-    rlang,
     rsample
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
