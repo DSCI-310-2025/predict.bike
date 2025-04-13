@@ -1,4 +1,4 @@
-# Contributing to `predict.bike`
+# Contributing
 
 Thanks for your interest in contributing to `predict.bike`!
 
@@ -14,7 +14,7 @@ This guide will walk you through our expectations for contributions based on [ti
 - Refactor or optimize existing code
 - Help triage issues or review pull requests
 
----
+
 ## Contributing
 
 Open an issue here: [Issues Page](https://github.com/DSIC-310-2025/predict.bike/issues)
@@ -50,7 +50,7 @@ Open an issue here: [Issues Page](https://github.com/DSIC-310-2025/predict.bike/
    usethis::pr_push()
    ```
 
----
+
 
 ## Pull Request Checklist
 
@@ -61,7 +61,7 @@ Before you submit a pull request:
 - [ ] Did you follow the tidyverse [style guide](https://style.tidyverse.org/)?
 - [ ] Did you clearly describe your changes in the PR?
 
----
+
 
 ## Code of Conduct
 
