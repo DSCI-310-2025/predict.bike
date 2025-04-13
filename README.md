@@ -5,6 +5,9 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/DSCI-310-2025/predict.bike/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/predict.bike/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/DSCI-310-2025/predict.bike/graph/badge.svg)](https://app.codecov.io/gh/DSCI-310-2025/predict.bike)
 <!-- badges: end -->
 
 The goal of predict.bike is to provide a workflow for a bike data set
@@ -26,15 +29,6 @@ lightweight, beginner-friendly alternative tailored to a specific
 problem and dataset. It allows users to focus on the logic and structure
 of a data analysis pipeline without needing to configure every modeling
 component.
-
-#### Comparison to related R packages
-
-| Package | Description | Complexity | General Purpose |
-|----|----|----|----|
-| **predict.bike** | Bikeshare-specific modeling workflow | Low | ❌ |
-| `randomForest` | Core Random Forest implementation in R | Medium | ✅ |
-| `caret` | Unified framework for model training and tuning | High | ✅ |
-| `tidymodels` | Modern modular modeling framework (tidyverse) | High | ✅ |
 
 ## Installation
 
@@ -89,27 +83,3 @@ save_plot("scatter_plot.png", output_file = "output/plots", width = 8)
 - `make_scatter()`: Generates customizable scatter plots
 - `make_bar()`: Creates bar plots with label and fill options
 - `save_plot()`: Saves a plot to a specified output path
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.

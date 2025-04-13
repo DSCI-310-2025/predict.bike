@@ -16,6 +16,9 @@ knitr::opts_chunk$set(
 # predict.bike
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/DSCI-310-2025/predict.bike/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/predict.bike/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/DSCI-310-2025/predict.bike/graph/badge.svg)](https://app.codecov.io/gh/DSCI-310-2025/predict.bike)
 <!-- badges: end -->
 
 The goal of predict.bike is to provide a workflow for a bike data set analysis.
@@ -24,15 +27,6 @@ The goal of predict.bike is to provide a workflow for a bike data set analysis.
 
 ## Ecosystem Context
 predict.bike sits within the broader R ecosystem of machine learning and data science packages. While powerful tools like caret, randomForest, and tidymodels offer highly customizable workflows, predict.bike is a lightweight, beginner-friendly alternative tailored to a specific problem and dataset. It allows users to focus on the logic and structure of a data analysis pipeline without needing to configure every modeling component.
-
-#### Comparison to related R packages
-
-| Package        | Description                                   | Complexity | General Purpose |
-|----------------|-----------------------------------------------|------------|-----------------|
-| **predict.bike** | Bikeshare-specific modeling workflow          | Low        | ❌              |
-| `randomForest` | Core Random Forest implementation in R         | Medium     | ✅              |
-| `caret`        | Unified framework for model training and tuning| High       | ✅              |
-| `tidymodels`   | Modern modular modeling framework (tidyverse)  | High       | ✅              |
 
 ## Installation
 
@@ -85,20 +79,3 @@ save_plot("scatter_plot.png", output_file = "output/plots", width = 8)
 - `make_scatter()`: Generates customizable scatter plots
 - `make_bar()`: Creates bar plots with label and fill options
 - `save_plot()`: Saves a plot to a specified output path
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
-
