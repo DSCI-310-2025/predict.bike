@@ -49,56 +49,12 @@
 <div class="page-header"><h1 id="predictbike">predict.bike<a class="anchor" aria-label="anchor" href="#predictbike"></a>
 </h1></div>
 <!-- badges: start -->
-<!-- badges: end -->
+
 <p>The goal of predict.bike is to provide a workflow for a bike data set analysis. <code>predict.bike</code> is an R package that streamlines the analysis and prediction of bikeshare usage using a clean, reproducible workflow. Designed with accessibility in mind, it is ideal for learners and data science beginners looking to practice data cleaning, modeling, and visualization with a real-world dataset. While more flexible frameworks like <code>caret</code> and <code>tidymodels</code> offer broader applicability, <code>predict.bike</code> focuses on a single problem and makes it easy to understand each step of a typical ML pipeline.</p>
 <div class="section level2">
 <h2 id="ecosystem-context">Ecosystem Context<a class="anchor" aria-label="anchor" href="#ecosystem-context"></a>
 </h2>
 <p>predict.bike sits within the broader R ecosystem of machine learning and data science packages. While powerful tools like caret, randomForest, and tidymodels offer highly customizable workflows, predict.bike is a lightweight, beginner-friendly alternative tailored to a specific problem and dataset. It allows users to focus on the logic and structure of a data analysis pipeline without needing to configure every modeling component.</p>
-<div class="section level4">
-<h4 id="comparison-to-related-r-packages">Comparison to related R packages<a class="anchor" aria-label="anchor" href="#comparison-to-related-r-packages"></a>
-</h4>
-<table class="table">
-<colgroup>
-<col width="25%">
-<col width="25%">
-<col width="25%">
-<col width="25%">
-</colgroup>
-<thead><tr class="header">
-<th>Package</th>
-<th>Description</th>
-<th>Complexity</th>
-<th>General Purpose</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><strong>predict.bike</strong></td>
-<td>Bikeshare-specific modeling workflow</td>
-<td>Low</td>
-<td>❌</td>
-</tr>
-<tr class="even">
-<td><code>randomForest</code></td>
-<td>Core Random Forest implementation in R</td>
-<td>Medium</td>
-<td>✅</td>
-</tr>
-<tr class="odd">
-<td><code>caret</code></td>
-<td>Unified framework for model training and tuning</td>
-<td>High</td>
-<td>✅</td>
-</tr>
-<tr class="even">
-<td><code>tidymodels</code></td>
-<td>Modern modular modeling framework (tidyverse)</td>
-<td>High</td>
-<td>✅</td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -160,20 +116,6 @@
 <li>
 <code><a href="reference/save_plot.html">save_plot()</a></code>: Saves a plot to a specified output path</li>
 </ul>
-<p>What is special about using <code>README.Rmd</code> instead of just <code>README.md</code>? You can include R chunks like so:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">cars</span><span class="op">)</span></span>
-<span><span class="co">#&gt;      speed           dist       </span></span>
-<span><span class="co">#&gt;  Min.   : 4.0   Min.   :  2.00  </span></span>
-<span><span class="co">#&gt;  1st Qu.:12.0   1st Qu.: 26.00  </span></span>
-<span><span class="co">#&gt;  Median :15.0   Median : 36.00  </span></span>
-<span><span class="co">#&gt;  Mean   :15.4   Mean   : 42.98  </span></span>
-<span><span class="co">#&gt;  3rd Qu.:19.0   3rd Qu.: 56.00  </span></span>
-<span><span class="co">#&gt;  Max.   :25.0   Max.   :120.00</span></span></code></pre></div>
-<p>You’ll still need to render <code>README.Rmd</code> regularly, to keep <code>README.md</code> up-to-date. <code>devtools::build_readme()</code> is handy for this.</p>
-<p>You can also embed plots, for example:</p>
-<p><img src="reference/figures/README-pressure-1.png" width="100%"></p>
-<p>In that case, don’t forget to commit and push the resulting figure files, so they display on GitHub and CRAN.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -214,7 +156,13 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/DSCI-310-2025/predict.bike/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/DSCI-310-2025/predict.bike/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://app.codecov.io/gh/DSCI-310-2025/predict.bike" class="external-link"><img src="https://codecov.io/gh/DSCI-310-2025/predict.bike/graph/badge.svg" alt="Codecov test coverage"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>
