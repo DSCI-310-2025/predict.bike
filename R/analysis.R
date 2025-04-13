@@ -36,6 +36,8 @@ split_data <- function(data, prop = 0.75) {
 #' @return An object of class "lm" containing the fitted model
 #'
 #' @export
+#' 
+#' @importFrom stats
 #'
 #' @examples
 #' data <- data.frame(x = rnorm(100), y = rnorm(100))
@@ -57,13 +59,15 @@ train_bike_model <- function(train_data, formula) {
 #' \item{predictions}{Data frame with actual and predicted values}
 #'
 #' @export
-#'
+#' 
+#' @importFrom stats
+#' 
 #' @examples
 #' data <- data.frame(x = rnorm(100), y = rnorm(100))
 #' model <- train_bike_model(data, y ~ x)
 #' results <- evaluate_model(model, data, "y")
 evaluate_model <- function(model, test_data, response_var) {
-  predictions <- predict(model, newdata = test_data)
+  predictions <- stats::predict(model, newdata = test_data)
   actuals <- test_data[[response_var]]
   rmse <- sqrt(mean((actuals - predictions)^2))
   

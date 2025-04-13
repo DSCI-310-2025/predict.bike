@@ -17,6 +17,6 @@ save_plot(name, output_file, width)
 Saves plot to a path, with a width and a name
 }
 \examples{
-directory <- "output/bike_data.csv"
+directory <- tempdir()
 save_plot("test_plot.png", directory, 10 )
 }

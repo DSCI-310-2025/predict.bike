@@ -31,5 +31,6 @@ Creates a bar plot with a given data, x, y and fill and title/labels you want
 }
 \examples{
 data_frame <- data.frame(x = c(1,2,3,4,5), y = c(5,6,7,8,9))
-make_bar(data_frame, "x", "y", "x", "My Bar Plot", "X-axis", "Y-axis", xlabels = c("1", "2","3", "4", "5"))
+make_bar(data_frame, "x", "y", "x", "My Bar Plot", "X-axis", 
+"Y-axis", xlabels = c("1", "2","3", "4", "5"))
 }

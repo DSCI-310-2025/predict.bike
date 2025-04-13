@@ -2,3 +2,8 @@
 ^\.Rproj\.user$
 ^LICENSE\.md$
 ^README\.Rmd$
+^\.github$
+^codecov$
+^CONTRIBUTING\.md$
+^CODE_OF_CONDUCT\.md$
+^output$
