@@ -14,7 +14,7 @@
 #' 
 #' @export
 #' 
-#' @importFrom ggplot2
+#' @import ggplot2
 #' 
 #' @examples
 #' data_frame <- data.frame(x = c(1,2,3,4,5), y = c(5,6,7,8,9))
@@ -45,11 +45,12 @@ make_scatter <- function(data, x, y, title, xlab, ylab, color) {
 #' 
 #' @export
 #' 
-#' @importFrom ggplot2
+#' @import ggplot2
 #' 
 #' @examples
 #' data_frame <- data.frame(x = c(1,2,3,4,5), y = c(5,6,7,8,9))
-#' make_bar(data_frame, "x", "y", "x", "My Bar Plot", "X-axis", "Y-axis", xlabels = c("1", "2","3", "4", "5"))
+#' make_bar(data_frame, "x", "y", "x", "My Bar Plot", "X-axis", 
+#' "Y-axis", xlabels = c("1", "2","3", "4", "5"))
 
 make_bar <- function(data, x, y, fill, title, xlab, ylab, xlabels) {
   g <- ggplot2::ggplot(data, ggplot2::aes(x = factor(.data[[x]]), y = .data[[y]], fill = factor(.data[[fill]]))) +
@@ -71,7 +72,7 @@ make_bar <- function(data, x, y, fill, title, xlab, ylab, xlabels) {
 #'
 #' @export
 #' @examples
-#' directory <- "output/bike_data.csv"
+#' directory <- tempdir()
 #' save_plot("test_plot.png", directory, 10 )
 
 save_plot <- function(name, output_file, width) {

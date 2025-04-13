@@ -14,7 +14,7 @@
 #'
 #' @export
 #'
-#' @import dplyr
+#' @importFrom dplyr
 #' 
 #' @examples
 #' data <- data.frame(X = 1:2, instant = 1:2, dteday = c("2021-01-01", "2021-01-02"),
@@ -22,6 +22,7 @@
 #' clean_bike_data(data)
 
 clean_bike_data <- function(data) {
+  X <- cnt <- dteday <- instant <- predict <- weathersit <- NULL
   data |>
     dplyr::select(-instant, -dteday) |>
     dplyr::mutate(

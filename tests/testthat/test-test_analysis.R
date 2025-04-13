@@ -1,14 +1,13 @@
 
-library(tibble)
 set.seed(2024)
-test_data <- tibble(
+test_data <- tibble::tibble(
   cnt = c(10, 20, 30),
   temp = c(15, 25, 35),
   season = c(1, 2, 1)
 )
 
 # Minimal training data
-bike_train_data <- tibble(
+bike_train_data <- tibble::tibble(
   cnt = c(10, 20, 30, 40),
   temp = c(15, 25, 35, 45),
   season = factor(c(1, 2, 1, 2))
@@ -25,13 +24,13 @@ test_model <- lm(cnt ~ temp, data = bike_train_data)
 expected_rmse <- sqrt(mean((
     predict(test_model, bike_train_data) - bike_train_data$cnt)^2))
 
-test_save_data <- tibble(
+test_save_data <- tibble::tibble(
   x = 1:3,
   y = c("a", "b", "c")
 )
 
 test_that("split_data() works", {
-  data <- tibble(cnt = 1:100)
+  data <- tibble::tibble(cnt = 1:100)
   split <- split_data(data)
   expect_equal(nrow(split$train), 75) # 75% of 100 = 75
 })
