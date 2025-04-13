@@ -20,6 +20,10 @@ knitr::opts_chunk$set(
 
 The goal of predict.bike is to provide a workflow for a bike data set analysis
 
+## Ecosysstem Context
+predict.bike sits within the broader R ecosystem of machine learning and data science packages. While powerful tools like caret, randomForest, and tidymodels offer highly customizable workflows, predict.bike is a lightweight, beginner-friendly alternative tailored to a specific problem and dataset. It allows users to focus on the logic and structure of a data analysis pipeline without needing to configure every modeling component.
+
+
 ## Installation
 
 You can install the development version of predict.bike from [GitHub](https://github.com/) with:
